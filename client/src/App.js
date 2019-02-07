@@ -1,19 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/pages/Home";
+import Search from "./components/pages/Search";
+import Saved from "./components/pages/Saved";
+import "./app.css";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+function App() {
+  return (
+    <Router>
+      <div>
+        <Navbar />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/search" component={Search} />
+        <Route exact path="/saved" component={Saved} />
       </div>
-    );
-  }
+    </Router>
+  );
 }
 
 export default App;

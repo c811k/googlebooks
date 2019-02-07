@@ -1,0 +1,16 @@
+body {
+    font-family: 'Noto Sans', cursive;
+
+}
+
+.jumbotron {
+    font-family: "Dancing Script";
+}
+
+.content {
+    padding: 25px;
+}
+
+.card {
+    padding: 5px;
+}
