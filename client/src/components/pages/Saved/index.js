@@ -18,7 +18,7 @@ class Saved extends React.Component {
             });
         });
     };
-    
+
     deleteBook = event => {
         event.preventDefault();
         axios.delete(`/api/books/${event.target.id}`).then(() => {
@@ -27,23 +27,23 @@ class Saved extends React.Component {
     };
       
     render() {
-    return (
-        <div className="content">
-            <Header />
-            {this.state.result.map((item) => {
-                return (
-                    <Result
-                    key={item._id}
-                    book={item}
-                    saveBook={this.saveBook}
-                    deleteBook={this.deleteBook} 
-                />
-                );
-            })}
-        </div>
-        
-    );
-    }
+        return (
+            <div className="content">
+                <Header />
+                {this.state.result.map((item) => {
+                    return (
+                        <Result
+                        key={item._id}
+                        book={item}
+                        saveBook={this.saveBook}
+                        deleteBook={this.deleteBook} 
+                    />
+                    );
+                })}
+            </div>
+            
+        );
+    };
 }
 
 

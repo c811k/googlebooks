@@ -44,7 +44,7 @@ class Search extends Component {
             image: book.volumeInfo.imageLinks.thumbnail,
             link: book.volumeInfo.canonicalVolumeLink
         });
-    }
+    };
 
     showResult = () => {
         return (
@@ -62,7 +62,7 @@ class Search extends Component {
                 })}
             </div>
         );
-    }
+    };
 
     render() {
         return (
@@ -76,7 +76,7 @@ class Search extends Component {
                 {this.showResult()}
             </div>
         );
-    }
+    };
 }
 
 export default Search;
