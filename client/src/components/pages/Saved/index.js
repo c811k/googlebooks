@@ -8,20 +8,21 @@ class Saved extends React.Component {
         result: []
     }
     componentDidMount() {
+        this.getBook();
+    };
+    
+    getBook = () => {
         axios.get("/api/books/").then((response) => {
             this.setState({
                 result: response.data
             });
         });
-      };
-      
+    };
+    
     deleteBook = event => {
         event.preventDefault();
-        console.log(event.target.id);
-        axios.delete(`/api/books/${event.target.id}`).then((response) => {
-            this.setState({
-                result: response.data
-            });
+        axios.delete(`/api/books/${event.target.id}`).then(() => {
+            this.getBook();
         });
     };
       

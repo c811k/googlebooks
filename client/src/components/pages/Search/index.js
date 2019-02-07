@@ -12,7 +12,7 @@ class Search extends Component {
     };
 
     componentDidMount() {
-        this.searchBooks("Old Men and the Sea");
+
     };
 
     searchBooks = query => {
@@ -46,17 +46,10 @@ class Search extends Component {
         });
     }
 
-    render() {
+    showResult = () => {
         return (
-            <div className="content">
-                <Header />
-                <SearchBar 
-                    value={this.state.search}
-                    handleInputChange={this.handleInputChange}
-                    handleFormSubmit={this.handleFormSubmit}
-                />
+            <div className="content bg-light">
                 <h2 className="mb-4">Results</h2>
-
                 {this.state.result.map((item) => {
                     return (
                         <Result
@@ -67,9 +60,21 @@ class Search extends Component {
                     />
                     );
                 })}
-               
             </div>
-            
+        );
+    }
+
+    render() {
+        return (
+            <div className="content">
+                <Header />
+                <SearchBar 
+                    value={this.state.search}
+                    handleInputChange={this.handleInputChange}
+                    handleFormSubmit={this.handleFormSubmit}
+                />
+                {this.showResult()}
+            </div>
         );
     }
 }

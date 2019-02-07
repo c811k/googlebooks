@@ -10,7 +10,7 @@ function SearchBar(props) {
                     value={props.value}
                     name="search"
                     type="text" 
-                    className="form-control" placeholder="ex: Harry Potter"
+                    className="form-control" placeholder="Search by Title"
                     id="search"
                 />
                 <div className="input-group-append">

@@ -3,8 +3,7 @@ import React from "react";
 function Result (props) {
     
     return (
-        <div className="content bg-light">
-            <div className="card mb-2">
+        <div className="card mb-2">
                 <div className="card-body">
                 <div className="row">
                 <div className="col-md-10">
@@ -25,8 +24,8 @@ function Result (props) {
                     </div>
                 </div>
                 </div>
-            </div>
-        </div>
+                </div>
+        
     );
 }
 
